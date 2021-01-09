@@ -17,7 +17,7 @@ Next, you will need to install some packages required by Odoo to your server.
 You can install all of them by running the following command:
 
 ```sh
-sudo apt install git python3-pip build-essential wget python3-dev python3-venv python3-wheel libxslt-dev libzip-dev libldap2-dev libsasl2-dev python3-setuptools node-less -y
+sudo apt install git python3-pip build-essential wget python3-dev python3-venv python3-wheel libxslt-dev libzip-dev libldap2-dev libsasl2-dev python3-setuptools node-less libpq-dev -y
 ```
 Once all the packages are installed, you can proceed to the next step.
 
