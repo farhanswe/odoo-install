@@ -166,4 +166,5 @@ You can also check the status of Odoo service with the following command:
 ```sh
 systemctl status odoo
 ```
+ ### Live url : http://localhost:8069
 
