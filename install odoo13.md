@@ -101,13 +101,13 @@ exit
 Next, copy the sample odoo13 configuration file with the following command:
 
 ```sh
-cp /opt/odoo13/odoo/debian/odoo.conf /etc/odoo13.conf
+sudo cp /opt/odoo13/odoo/debian/odoo.conf /etc/odoo13.conf
 ```
 
 Next, open the /etc/odoo13.conf file with the following command:
 
 ```sh
-nano /etc/odoo13.conf
+sudo nano /etc/odoo13.conf
 ```
 
 Make the following changes:
