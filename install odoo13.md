@@ -77,6 +77,7 @@ Next, install all the required packages with the following command:
 ```sh
 pip3 install wheel
 pip3 install -r odoo/requirements.txt
+pip3 install Werkzeug PyPDF2 python-dateutil polib Pillow psycopg2 psutil reportlab
 ```
 
 Next, disconnect from the environment with the following command:
