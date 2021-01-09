@@ -117,7 +117,7 @@ Make the following changes:
 admin_passwd = admin@123
 db_host = False
 db_port = False
-db_user = odoo12
+db_user = odoo13
 db_password = False
 addons_path = /opt/odoo13/odoo/addons,/opt/odoo13/odoo-custom-addons
 ```
