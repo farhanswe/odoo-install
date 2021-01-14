@@ -19,7 +19,33 @@ You can install all of them by running the following command:
 ```sh
 sudo apt install git python3-pip build-essential wget python3-dev python3-venv python3-wheel libxslt-dev libzip-dev libldap2-dev libsasl2-dev python3-setuptools node-less libpq-dev -y
 ```
+Next,
+
+You can install all of them by running the following command:
+
+```sh
+sudo apt-get install python-dev python3-dev libxml2-dev libxslt1-dev zlib1g-dev libsasl2-dev libldap2-dev build-essential libssl-dev libffi-dev libmysqlclient-dev libjpeg-dev libpq-dev libjpeg8-dev liblcms2-dev libblas-dev libatlas-base-dev
+```
+After installation of the packages and libraries, need to install some web dependencies also.
+
+```sh
+sudo apt-get install -y npm
+sudo ln -s /usr/bin/nodejs /usr/bin/node
+sudo npm install -g less less-plugin-clean-css
+sudo apt-get install -y node-less
+```
+Install wkhtmltopdf to print PDF reports. ‘0.12.5’ is the recommended version for Odoo13. You can install wkhtmltopdf using the following command.
+
+```sh
+sudo wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.bionic_amd64.deb
+sudo dpkg -i wkhtmltox_0.12.5-1.bionic_amd64.deb
+sudo apt install -f
+```
+
+
+
 Once all the packages are installed, you can proceed to the next step.
+
 
 ## Install and Configure PostgreSQL
 
@@ -48,6 +74,7 @@ You can create it with the following command:
 ```sh
 sudo su - postgres -c "createuser -s odoo13"
 ```
+
 ## Install and Configure Odoo
 
 First, you will need to download the latest version of Odoo from the Git repository. 
@@ -97,6 +124,16 @@ Next, exit from the Odoo13 user with the following command:
 ```sh
 exit
 ```
+After the successful installation of dependencies, we have to configure the Odoo. Odoo will maintain log files.
+create a directory to store the log file
+```sh
+sudo mkdir /var/log/odoo
+```
+Next will give the complete access of this directory to the user odoo.
+
+```sh
+sudo chown odoo13:root /var/log/odoo
+```
 
 Next, copy the sample odoo13 configuration file with the following command:
 
@@ -121,6 +158,7 @@ db_port = False
 db_user = odoo13
 db_password = False
 addons_path = /opt/odoo13/odoo/addons,/opt/odoo13/odoo-custom-addons
+logfile = /var/log/odoo/odoo13.log
 ```
 
 Save and close the file, when you are finished.
