@@ -24,7 +24,7 @@ Next,
 You can install all of them by running the following command:
 
 ```sh
-sudo apt-get install python-dev python3-dev libxml2-dev libxslt1-dev zlib1g-dev libsasl2-dev libldap2-dev build-essential libssl-dev libffi-dev libmysqlclient-dev libjpeg-dev libpq-dev libjpeg8-dev liblcms2-dev libblas-dev libatlas-base-dev
+sudo apt-get install python-dev libxml2-dev libxslt1-dev zlib1g-dev libsasl2-dev libldap2-dev build-essential libssl-dev libffi-dev libmysqlclient-dev libjpeg-dev libpq-dev libjpeg8-dev liblcms2-dev libblas-dev libatlas-base-dev
 ```
 After installation of the packages and libraries, need to install some web dependencies also.
 
@@ -202,7 +202,7 @@ sudo systemctl start odoo13
 You can also check the status of Odoo service with the following command:
 
 ```sh
-systemctl status odoo
+sudo systemctl status odoo13
 ```
  ### Live url : http://localhost:8069
 
